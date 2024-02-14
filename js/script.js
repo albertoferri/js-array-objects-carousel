@@ -42,7 +42,24 @@ const sliderElement = document.getElementById("slider");
 // tramite un ciclo for prendiamo ogni indirizzo delle immagini dall'array
 images.forEach((slider, i) => {
 
-    sliderElement.innerHTML += `<img src="./img/0${i + 1}.webp" alt="immagine ${i + 1}">`;
+
+    const img = images[i].url;
+    const titolo = images[i].title;
+    const desc = images[i].text;
+
+
+    sliderElement.innerHTML += `<img src="./img/0${i + 1}.webp" alt="immagine ${i + 1}">
+                                <h2 class="text"> ${images[i].title}</h2>
+                                <p class="text"> ${images[i].text}</p>`;
+
+
+
+
+
+    // if (i === i){
+    //     sliderElement.innerHTML += `<h2 class="text"> ${images[i].title}</h2>`;
+    //     sliderElement.innerHTML += `<p class="text"> ${images[i].text}</p>`;
+    // }
 
 
     console.log(slider)
@@ -98,12 +115,14 @@ document.querySelector("#right-arrow").addEventListener("click", function() {
 
 document.querySelector("#left-arrow").addEventListener("click", function() {
 
-    if (slideNumber > 1) {
+
+    if (slideNumber < images.length) {
+
         // - prendo l'immagine attuale e le rimuovo la classe "active"  
         document.querySelector(`#slider img:nth-of-type(${slideNumber})`).classList.remove("active");
 
-        // - diminuisco il contatore di 1
-        slideNumber--;
+        // - aumento il contatore di 1
+        slideNumber++;
 
         // - prendo l'immagine con il nuovo contatore e le aggiungo la classe "active"
         document.querySelector(`#slider img:nth-of-type(${slideNumber})`).classList.add("active");
@@ -115,14 +134,24 @@ document.querySelector("#left-arrow").addEventListener("click", function() {
         // - prendo l'immagine attuale e le rimuovo la classe "active"  
         document.querySelector(`#slider img:nth-of-type(${slideNumber})`).classList.remove("active");
 
-        // - metto il valore di slideNumebr = alla posizione dell'ultima immagine
-        slideNumber = images.length;
+        // resetto la variabile che mi conta l'immagine a cui sono arrivato
+        slideNumber = 1;
 
         // - prendo l'immagine con il nuovo contatore e le aggiungo la classe "active"
         document.querySelector(`#slider img:nth-of-type(${slideNumber})`).classList.add("active");
 
     }
-    
 
-
+        
 });
+
+
+// let thumbnailElement = document.getElementById("thumbnails")
+
+// for (let key in images){
+
+//     const imgUrl = images[key];
+//     const imgDiv = document.createElement("div");
+
+//     imgDiv.style.backgroundImage = `url(img/${key + 1}.webp)`
+// }

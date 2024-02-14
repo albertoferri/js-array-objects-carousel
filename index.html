@@ -16,18 +16,41 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <h1 class="text-center my-5">Carosello Array di Oggetti</h1>
+    <main class="container">
+        <h1 class="text-center my-5">Carosello Array di Oggetti</h1>
+        <div class="row my-5">   
+            <div class="col-9 px-0">
 
-    <div class="container">
+                <div class="rounded-start-4 " id="slider">
+                    <div id="arrows">
+                        <i id="left-arrow" class="fa-solid fa-arrow-left"></i>
+                        <i id="right-arrow" class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+            </div> 
+            <div class="col-3 d-flex flex-column px-0 rounded-end-4">
 
-        <div id="slider">
-            <div id="arrows">
-                <i id="up-arrow" class="fa-solid fa-arrow-up"></i>
-                <i id="down-arrow" class="fa-solid fa-arrow-down"></i>
+                <div id="thumbnails">
+                    <div class="img-thumb">
+                        <img src="img/01.webp" alt="">
+                    </div>
+                    <div class="img-thumb">
+                        <img src="img/02.webp" alt="">
+                    </div>
+                    <div class="img-thumb">
+                        <img src="img/03.webp" alt="">
+                    </div>
+                    <div class="img-thumb">
+                        <img src="img/04.webp" alt="">
+                    </div>
+                    <div class="img-thumb">
+                        <img src="img/05.webp" alt="">
+                    </div>
+                </div>
             </div>
+    
         </div>
-
-    </div>
+    </main>
 
 
     <script src="js/script.js"></script>

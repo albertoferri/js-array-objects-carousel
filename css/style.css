@@ -27,9 +27,9 @@
     object-fit: cover;
 }
 
-#slider img:not(.active) {
+/* #slider img:not(.active) {
     display: none;
-}
+} */
 
 #slider #arrows {
     display: flex;
@@ -81,4 +81,23 @@
 
 .img-thumb img:hover{
     border: 2px solid white;
+}
+
+#slider .slide{
+    height: 100%;
+    position: relative;
+}
+
+#slider .slide .details{
+    position: absolute;
+
+    bottom: 0;
+    right: 0;
+    color: white;
+    padding: 18px;
+    text-align: right;
+}
+
+#slider .slide:not(.active) {
+    display: none;
 }

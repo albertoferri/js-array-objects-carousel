@@ -40,30 +40,15 @@ const sliderElement = document.getElementById("slider");
 
 
 // tramite un ciclo for prendiamo ogni indirizzo delle immagini dall'array
+// tramite un ciclo for prendiamo ogni indirizzo delle immagini dall'array
 images.forEach((slider, i) => {
 
+    // sliderElement.innerHTML += `<img src="./img/0${i + 1}.webp" alt="immagine ${i + 1}">`;
 
-    const img = images[i].url;
-    const titolo = images[i].title;
-    const desc = images[i].text;
+    // per ognuno di essi andremo a creare un elemento img dentro lo slider
 
-
-    sliderElement.innerHTML += `<img src="./img/0${i + 1}.webp" alt="immagine ${i + 1}">
-                                <h2 class="text"> ${images[i].title}</h2>
-                                <p class="text"> ${images[i].text}</p>`;
-
-
-
-
-
-    // if (i === i){
-    //     sliderElement.innerHTML += `<h2 class="text"> ${images[i].title}</h2>`;
-    //     sliderElement.innerHTML += `<p class="text"> ${images[i].text}</p>`;
-    // }
-
-
-    console.log(slider)
 });
+
 
 document.querySelector("#slider img:nth-of-type(1)").className = "active";
 
@@ -144,14 +129,3 @@ document.querySelector("#left-arrow").addEventListener("click", function() {
 
         
 });
-
-
-// let thumbnailElement = document.getElementById("thumbnails")
-
-// for (let key in images){
-
-//     const imgUrl = images[key];
-//     const imgDiv = document.createElement("div");
-
-//     imgDiv.style.backgroundImage = `url(img/${key + 1}.webp)`
-// }
